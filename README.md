@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# React Modern Calculator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek, responsive calculator built with React, featuring:
 
-## Available Scripts
+* Light / Dark theme toggle
+* Sound on button press (with toggle)
+* Scientific functions (square root, exponentiation)
+* Calculation history panel
+* Mobile-first responsive design
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Node.js** v14 or higher (bundled with npm)
+* **Git** (optional, to clone repository)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone repository** (or skip if you already have the files locally):
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/your-username/react-modern-calculator.git
+   cd react-modern-calculator
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## File Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+react-modern-calculator/
+├── public/
+│   └── index.html     # Root HTML
+├── src/
+│   ├── App.js         # Main component (calculator logic)
+│   ├── App.css        # Styles (light/dark theme, responsive, animations)
+│   ├── ThemeToggle.js # Theme switch button
+│   ├── SoundToggle.js # Sound enable/disable button
+│   ├── HistoryPanel.js# Calculation history sidebar
+│   └── index.js       # React entry point
+└── README.md          # This file
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Configuration
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* **Theme**: Controlled via the `data-theme` attribute on the root `<div>` in `App.js`. Supported values: `light` (default), `dark`.
+* **Sound**: Toggle on/off with the speaker icon. Uses the Web Audio API.
+* **History**: Automatically logs every calculation when you press `=`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Start development server**
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Analyzing the Bundle Size
+> **Tip:** The terminal running `npm start` will automatically reload when you save changes in `src/` files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Building for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To create an optimized production build:
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This outputs static files into a `build/` directory, ready for deployment.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Editing Code
 
-### `npm run build` fails to minify
+* **Styles:** modify `src/App.css`
+* **Calculator logic:** edit `src/App.js`
+* **Components:** tweak or extend in `src/ThemeToggle.js`, `src/SoundToggle.js`, `src/HistoryPanel.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Save your changes and watch the app reload instantly!
